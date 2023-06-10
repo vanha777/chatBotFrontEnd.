@@ -20,7 +20,7 @@
     "babylonjs": "^5.53.0",
     "babylonjs-gui": "^5.53.0",
     "babylonjs-loaders": "^5.53.0",
-    "gltfjsx": "^6.1.4",
+    "gltfjsx": "^6.2.3",
     "react": "^18.2.0",
     "react-babylonjs": "^3.1.15",
     "react-dom": "^18.2.0",

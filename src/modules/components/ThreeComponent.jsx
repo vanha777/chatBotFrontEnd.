@@ -4,6 +4,7 @@ import Model from './IronMan';
 
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { OrbitControls, Environment } from '@react-three/drei';
+import SpinningLoadingIcon from './SpinningLoadingIcon.jsx';
 
 
 const ThreeComponent = (props) => {
@@ -26,15 +27,17 @@ const ThreeComponent = (props) => {
 
     return (
         <Canvas flat="sunset" linear="true"  >
-            <MyCamera />
-            {/*<Environment preset="sunset" background blur={0.5} />*/}
+            <Suspense fallback={<SpinningLoadingIcon />} >
+                <MyCamera />
+                {/*<Environment preset="sunset" background blur={0.5} />*/}
 
-            <directionalLight intensity={4} position={[2, 5, 0]} />
-            {/* wait when model are being built */}
-            <Suspense fallback={null}>
+                <directionalLight intensity={4} position={[2, 5, 0]} />
+                {/* wait when model are being built */}
+
                 <Model userInteract={chatBotState} />
             </ Suspense>
             {/*<OrbitControls enablePan={true} enableZoom={true} enableRotate={true} />*/}
+
         </Canvas>
     )
 }

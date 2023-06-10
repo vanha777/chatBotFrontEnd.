@@ -20,9 +20,8 @@ import ChatBox from './ChatBox.js'
 import theme from '../../modules/theme.js';
 import logo from '../../modules/images/logo.png'
 import ThreeComponent from '../../modules/components/ThreeComponent.jsx';
+
 import { useInteractionState } from '../../modules/components/userInteractionState';
-
-
 const drawerWidth = 240;
 
 //AppBar change when open drawer
@@ -81,7 +80,7 @@ const CircleBox = styled(Box)({
 
 
 function DashboardContent(props) {
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
   const chatBoxRef = useRef(null);
   const { userState, updateUserState } = useInteractionState();
   const toggleDrawer = () => {
@@ -199,20 +198,20 @@ function DashboardContent(props) {
           </List>
           {open === true
             ?
-            <Link variant='referenceLink' 
-            href='https://master--stellular-stroopwafel-36ea55.netlify.app' 
-            target="_blank"
-            sx={{
-              position: 'absolute',
-              bottom: '0',
-              left: '0',
-              width: '100%',
-              backgroundColor: theme.palette.primary.main,
-              color: '#5CA8FF',
-              display: 'flex',
-              justifyContent: 'center',
-              padding: '50px',
-            }}>
+            <Link variant='referenceLink'
+              href='https://master--stellular-stroopwafel-36ea55.netlify.app'
+              target="_blank"
+              sx={{
+                position: 'absolute',
+                bottom: '0',
+                left: '0',
+                width: '100%',
+                backgroundColor: theme.palette.primary.main,
+                color: '#5CA8FF',
+                display: 'flex',
+                justifyContent: 'center',
+                padding: '50px',
+              }}>
               @Built by CopyCoder
             </Link>
             : (null)

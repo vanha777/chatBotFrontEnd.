@@ -236,18 +236,19 @@ const ChatBox = (props) => {
             <div className={classes.chatInputContainer}>
                 <TextField
                     className={classes.chatInput}
-                    label="Type a message to send"
+                    label="Start typing"
                     InputLabelProps={{ style: { color: 'white', } }}
+
                     value={message2}
                     onChange={(e) => handleInput(e.target.value)}
-                    variant="filled"
+                    variant="outlined"
                     size="small"
                     onKeyPress={(event) => {
                         if (event.key === 'Enter') {
                             handleSendMessage();
                         }
                     }}
-                    aria-label="Type a message to send"
+                    aria-label="Start typing"
                 />
                 <Button
                     className={classes.sendButton}
