@@ -195,7 +195,7 @@ const ChatBox = (props) => {
             method: 'POST',
             headers: { 'Content-type': 'application/json; charset=UTF-8', },
             body: JSON.stringify({
-                input: 'Please Introduce Yourself'
+                input: 'Please Introduce Yourself in vietnamese'
             })
         }).then((res) => res.json()).then((res) => { return res.result.content }).catch((err) => console.log(`Front-end failed to fetch /chat, ${err}`));
         await welcome;
