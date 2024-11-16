@@ -67,7 +67,7 @@ export default function Model(props) {
     // use gltfjsx@6.1.4 to read local files glb then convert into component that are read by react-three-drei
     return (
 
-        <group ref={group} {...props} dispose={null}>
+        <group ref={group}  dispose={null}>
             <group name="Sketchfab_Scene">
                 <group name="Sketchfab_model" rotation={[-Math.PI / 2, 0, 0]} scale={2.126}>
                     <group
